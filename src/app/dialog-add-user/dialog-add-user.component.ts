@@ -15,7 +15,7 @@ export class DialogAddUserComponent implements OnInit {
 
 
 
-  constructor(private firestore: AngularFirestore, private dialog: MatDialogRef<DialogAddUserComponent>) { }
+  constructor(private firestore: AngularFirestore, public dialog: MatDialogRef<DialogAddUserComponent>) { }
 
   ngOnInit(): void {
   }
