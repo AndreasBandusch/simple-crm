@@ -27,6 +27,7 @@ import { provideDatabase, getDatabase } from '@angular/fire/database';
 import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { UserDetailsComponent } from './user-details/user-details.component';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
     AppComponent,
     DashboardComponent,
     UserComponent,
-    DialogAddUserComponent
+    DialogAddUserComponent,
+    UserDetailsComponent
   ],
   imports: [
     BrowserModule,
