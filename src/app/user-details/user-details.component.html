@@ -8,8 +8,8 @@
 
     <img src="assets/img/custom-profile-picture.png">
     <div class="user-details">
-        <h2>{{ user.firstName }} {{ user.lastName }}</h2> 
-        {{ user.email }} <br>
+        <h2>{{ user?.firstName }} {{ user?.lastName }}</h2> 
+        {{ user?.email }} <br>
     </div>
 </mat-card> 
 
@@ -23,7 +23,7 @@
 
     <mat-card-title>Address</mat-card-title>
     <mat-card-content>
-        {{ user.street }}<br>
-        {{ user.zipCode }} {{ user.city }}
+        {{ user?.street }}<br>
+        {{ user?.zipCode }} {{ user?.city }}
     </mat-card-content>
 </mat-card>
