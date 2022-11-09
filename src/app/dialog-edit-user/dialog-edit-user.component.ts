@@ -10,7 +10,7 @@ import { User } from 'src/models/user.class';
 })
 
 export class DialogEditUserComponent implements OnInit {
-  user: User;
+  user: User = new User();
   userId: string;
   loading = false;
   birthDate: Date;

@@ -6,6 +6,7 @@ import { User } from 'src/models/user.class';
 import { DialogEditAddressComponent } from '../dialog-edit-address/dialog-edit-address.component';
 import { DialogEditUserComponent } from '../dialog-edit-user/dialog-edit-user.component';
 
+
 @Component({
   selector: 'app-user-details',
   templateUrl: './user-details.component.html',
@@ -30,13 +31,16 @@ export class UserDetailsComponent implements OnInit {
 
 
   getUser() {
-    this.firestore
+    if (this.userId) {
+      this.firestore
       .collection('users')
       .doc(this.userId)
       .valueChanges()
       .subscribe((user: User) => {
-        this.user = new User(user);
+        this.user = new User(user);  
       }) 
+    }
+    
   }
 
   
